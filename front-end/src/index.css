@@ -1,0 +1,409 @@
+
+html {
+  font-size: 62.5%; /* 16px x 62.5 = 10px = 1rem */
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  height: 100vh;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+#root {
+  height: 100%;
+}
+
+/* Layout */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 5rem;
+  height: 100%;
+}
+header {
+  grid-area: header;
+  background-color: #741980;
+  color: #cec8c8;
+}
+main {
+  grid-area: main;
+  padding: 1rem;
+}
+footer {
+  grid-area: footer;
+  background-color: #741980;
+  color: #ffffff;
+}
+/* Common */
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #ff8000;
+}
+/* Header */
+header a {
+  color: #ffffff;
+  padding: 1rem;
+}
+a.brand {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.row.center {
+  justify-content: center;
+}
+
+.margin {
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+/* CARD */
+.card{
+  border: 0.1rem chocolate solid;
+  background-color: whitesmoke;
+  border-radius: 0.5rem;
+  margin: 1rem;
+}
+.card-body{
+  padding: 1rem;
+}
+.card-body > * {
+  margin-bottom: 0.5rem;
+}
+.card-body{
+  padding: 1rem;
+}
+
+.price{
+  font-size: 2.5rem;
+  color: firebrick;
+  margin-bottom: 2rem;
+  
+}
+.price span:last-child{
+  color: black;
+  
+}
+
+
+
+/* Rating */
+.rating span{
+  color:goldenrod;
+  margin: 0.1rem;
+}
+.rating span:last-child{
+  color: black;
+}
+ /* addToCart */
+.addToCart{
+  margin: 0.5rem;
+  justify-content: center;
+  display: flex;
+  font-size: 2rem;
+}
+.alert{
+  padding: 1rem;
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
+}
+.alert-info{
+  color:rebeccapurple;
+  background-color:cornsilk;
+}
+.alert-danger{
+  color: rgb(104, 7, 7);
+  background-color:rgb(245, 195, 195)
+
+}
+.alert-inwork{
+  color: rgb(22, 7, 90);
+  background-color:rgb(89, 136, 223);
+  width: 35%;
+}
+.alertSize{
+  font-size: 1.65rem;
+}
+.notAvail{
+  margin: 2rem;
+  justify-content: center;
+  display: flex;
+  font-size: 2rem;
+  color:rgb(107, 5, 5);
+}
+span.qty{
+  margin-left: 3rem;
+}
+
+
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+li {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+button {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 0.1rem #a4a4a4 solid;
+  font-size: 1.6rem;
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8f8;
+  cursor: pointer;
+}
+button:hover {
+  border: 0.1rem #404040 solid;
+}
+button.primary {
+  background-color: #d3a2e0;
+}
+button.block {
+  width: 100%;
+}
+.button-right {
+  align-items: flex-end;
+}
+.row.top {
+  align-items: flex-start;
+}
+.col-1 {
+  flex: 1 1 25rem;
+}
+.col-1-balance {
+  flex: 1 1 10rem;
+}
+.col-2 {
+  flex: 2 1 50rem;
+}
+
+img.large {
+  width: 80%;
+}
+/* Alert */
+.success {
+  color: #20a020;
+}
+.error {
+  color: #a02020;
+}
+.badge {
+  background-color: #f02020;
+  color: #ffffff;
+  border-radius: 50%;
+  padding: 0.2rem 0.7rem;
+  font-size: 1.4rem;
+  margin-left: 0.2rem;
+}
+
+/* cart screen */
+.min-30 {
+  min-width: 30rem;
+}
+img.small {
+  max-width: 5rem;
+  width: 100%;
+}
+
+
+/* Form */
+.form {
+  max-width: 60rem;
+  margin: 0 auto;
+}
+.form > div {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.form label {
+  margin: 1rem 0;
+  display: block;
+}
+.form FormControl {
+  font-size: 450rem;
+}
+
+/* Dropdown */
+.dropdown {
+  display: inline-block;
+  position: relative;
+}
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: #203040;
+  margin: 0;
+  margin-top: 0.4rem;
+  border-radius: 0.5rem;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Checkout Steps */
+.checkout-steps > div {
+  border-top: 0.3rem #c0c0c0 solid;
+  color: #c0c0c0;
+  flex: 1;
+  padding: 1rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.checkout-steps > div.active {
+  border-top-color: #f08000;
+  color: hsl(32, 100%, 47%);
+  font-size: 1.2rem;
+}
+
+/* Table */
+.table {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table tbody tr:nth-of-type(odd) {
+  background-color: #f4f4f4;
+}
+.table td,
+.table th {
+  text-align: left;
+  border: 0.1rem solid #e4e4e4;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+.table button {
+  margin: 0 0.2rem;
+}
+
+
+/* Bill Screen */
+.cutomername {
+  font-size: 2.8rem;
+  background-color:#a4a4a4;
+}
+
+.balance {
+  font-size: 3rem;
+  color: #a02020;
+  background-color: #f5dddd;
+}
+
+.customer-card {
+ 
+  
+    border: 0.1rem rgb(45, 3, 70) solid;
+    background-color: whitesmoke;
+    border-radius: 0.5rem;
+    margin: 1rem;
+
+}
+
+
+/* bill details section */
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+/* Table */
+.table-desc {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table-desc tbody tr:nth-of-type(odd) {
+  background-color: #f4f4f4;
+}
+.table-desc td,
+.table-desc th {
+  text-align: left;
+  border: 0.1rem solid #e4e4e4;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+.table-desc button {
+  margin: 0 0.2rem;
+}
+
+
+hr.new2 {
+  border-top: 1px dashed rgb(55, 6, 87);
+}
